@@ -30,6 +30,9 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
 
     # Implement your code here.
 
+    assert x>=0
+    assert y>=0
+    
     if (input_board[x][y] == old):
         
         # since strings are immutable in python, I used slicing to edit the string in the board
@@ -46,13 +49,14 @@ def flood_fill(input_board: List[str], old: str, new: str, x: int, y: int) -> Li
         return input_board
 
         
-    
+print("Floodfill is commencing")    
 modified_board = flood_fill(input_board=board, old=".", new="M", x=5, y=12)
 print("\n")
 
 for a in modified_board:
     print(a)
-    
+
+print("Floodfill is done!")  
 
 # Expected output:
 # ......................
